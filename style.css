@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'GreatVibes';
+  src: url('fonts/GreatVibes-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 150px;
+}
+
+.navbar li {
+  padding-right: 35px;
+}
+
+.navbar img {
+  width: 150%;
+  height: 60px;
+  padding-left: 150px;
+}
+
+.navbar .nav-link {
+  position: relative;
+  color: white !important;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+}
+
+.navbar .nav-link:hover {
+  color: #f8f9fa !important;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ffd700;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 1.5rem;
+}
+
+h1 {
+  font-family: 'GreatVibes', sans-serif;
+}
+
+.hero-section {
+  background-image: url('image/Menu.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-color: #000000;
+  padding-bottom: 70px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); 
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-button {
+  margin-top: 55px;
+  background-color: #23BCF5;
+  padding: 1.2rem 2.2rem;
+  border: 1px solid #7F9996;
+  color: white;
+  font-size: 1.32rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: scale(1.4); 
+  box-shadow: 0 0 8px 8px rgba(35, 188, 245, 0.8);
+  border: 1px solid #7F9996; 
+}
+
+.gold-stripe {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(90deg, #f4c542, #ffd700, #f4c542);
+  background-size: 200% 100%;
+  animation: shimmer 1s infinite linear;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.hero-section {
+  position: relative;
+  padding-bottom: 70px;
+}
+
+@media (max-width: 767px) {
+  .navbar img {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 1rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .gold-stripe {
+    height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar img {
+    width: 120%;
+    padding-left: 80px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-button {
+    padding: 1.1rem 2.1rem;
+    font-size: 1.2rem;
+  }
+
+  .gold-stripe {
+    height: 40px;
+  }
+}
